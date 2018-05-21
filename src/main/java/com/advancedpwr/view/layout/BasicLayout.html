@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<script type='text/javascript'>
+	// This script cleans off input parameters
+		jQuery( document ).ready()
+		{
+			appChange = true;
+			var bareLocation = location.protocol + '//' + location.host + location.pathname + location.hash;
+			if ( bareLocation != window.location.href )
+			{
+				window.location.href = bareLocation;	
+			}
+			//provide a clue for back button
+			location.hash = "#ACTION=$view.getCurrentAction()";
+		}
+</script>
+</head>
+<body>
+<form name="backform" class="ajaxify">
+	<input type="hidden" name="ACTION" value=""/>
+</form>	
+$view.getView()
+</body>
+</html>

@@ -1,0 +1,38 @@
+<style>
+#exception_header$view.hashCode()
+{
+	color: red;
+	font-weight: bold;
+}
+#exception_header$view.hashCode() a
+{
+	color: red;
+	text-decoration: underline;
+	font-weight: bold;
+}
+#exception_detail$view.hashCode()
+{
+	display: none;
+	color: red;
+}
+</style>
+<script type="text/javascript">
+function toggleView( id )
+{
+	var element = document.getElementById( id );
+	if ( element.style.display == 'none' || element.style.display == '')
+	{
+		element.style.display = 'block';
+	}
+	else
+	{
+		element.style.display = 'none';
+	}
+}
+</script>
+<div id="exception_header$view.hashCode()">
+$view.exceptionMessage() <a onclick="toggleView('exception_detail$view.hashCode()')">(view details)</a>
+</div>
+
+<div id="exception_detail$view.hashCode()">
+<pre>

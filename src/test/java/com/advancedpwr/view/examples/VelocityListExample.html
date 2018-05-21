@@ -1,0 +1,12 @@
+<table>
+	<tr>
+	<td>Car</td>
+	<td>Price</td>
+	</tr>
+	#foreach( $car in $view.listCars() )
+	<tr>
+	<td>$car.getName()</td>
+	<td>$car.getPrice()</td>
+	</tr>	
+	#end
+</table>

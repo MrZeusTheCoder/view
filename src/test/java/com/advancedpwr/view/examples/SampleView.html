@@ -1,0 +1,21 @@
+<form id="imageForm" name="imageForm" method="post">
+	<div id="cartStep" class="step">
+	
+		$view.startAction()
+		
+		$view.proposalSummaryView()
+		<div>
+			$view.priceSummaryView()
+		</div>
+		
+		$view.aVoidMethod()
+
+		$view.aNullMethod()
+
+		<div class="form_row">
+			<input value="Update" title="Update" type="button" class="generic" onclick="continueFunc( this, '$view.updateAction()' );"/>
+			<input value="$i18n.continue_button()" title="$i18n.continue_button()" type="submit" class="generic"
+		           onclick="continueFunc( this,'$view.billingAction()' );" />
+		</div>
+	</div>
+</form>
