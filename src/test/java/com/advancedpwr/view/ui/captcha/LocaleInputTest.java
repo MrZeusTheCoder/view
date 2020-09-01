@@ -15,19 +15,21 @@ import junit.framework.TestCase;
 public class LocaleInputTest extends TestCase
 {
 	public void testLocale()
-	{
+	{	
 		LocaleInput input = new LocaleInput();
+		assertEquals(Locale.getDefault(), input.getDefaultLocale());
 		input.setDefaultLocale( Locale.JAPAN );
+		assertEquals(Locale.JAPAN, input.getDefaultLocale());
+		assertEquals(Locale.JAPAN, input.locale());
 		input.setLocale( "xx_XX" );
-		System.out.println( input.locale() );
+		Locale testLocale = input.locale();
+		input.setLocale(null);
+		assertEquals(testLocale, input.locale());
 		
-		input.setLocale( "es" );
-		
-		System.out.println( input.locale() );
+		input.setLocale( "es-us" );
+		assertEquals(new Locale("es", "us"), input.locale());
 		
 		input.setLocale( "xyz" );
-		
-		System.out.println( input.locale() );
-		
+		assertEquals(new Locale("xyz"), input.locale());
 	}
 }
