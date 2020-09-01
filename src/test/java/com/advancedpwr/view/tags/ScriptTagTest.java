@@ -67,4 +67,11 @@ public class ScriptTagTest extends TestCase
 		renderer.render();
 		return out.toString();
 	}
+	
+	public void testIsScript() 
+	{
+		ScriptTag tag = new ScriptTag();
+		
+		assertFalse(tag.isScript(null));
+	}
 }
