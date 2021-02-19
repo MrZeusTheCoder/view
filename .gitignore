@@ -1,3 +1,4 @@
-/bin/
-/.gradle/
-/local.properties
+bin/
+.gradle/
+local.properties
+build/
