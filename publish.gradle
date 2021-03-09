@@ -48,7 +48,7 @@ publishing {
             pom {
                 name = 'Nview'
                 description = 'JSP replacement technology. Stress-free JSP.'
-                url = 'github.com/avery1701/view'
+                url = 'https://github.com/avery1701/view'
                 
                 licenses {
                     license {
@@ -72,7 +72,7 @@ publishing {
                 
                 scm {
                     connection = 'scm:git:https://github.com/avery1701/view.git'
-                    url = 'github.com/avery1701/view'
+                    url = 'https://github.com/avery1701/view'
                 }
             }
         }
